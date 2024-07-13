@@ -1,0 +1,31 @@
+{
+  "name": "professional-portfolio",
+  "version": "1.0.0",
+  "description": "A professional portfolio showcasing my projects and skills.",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "prebuild-dev": "shx rm -rf dist/*",
+    "build-dev": "parcel build ./src/index.html --no-optimize --public-url ./",
+    "prebuild": "shx rm -rf dist/*",
+    "build": "parcel build ./src/index.html --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "homepage": "https://github.com/PrityanshuSingh/Professional-Porfolio",
+  "author": "Prityanshu Singh",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10",
+    "shx": "^0.3.2",
+    "gh-pages": "^5.0.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.24.1"
+  }
+}

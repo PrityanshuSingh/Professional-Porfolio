@@ -1,0 +1,88 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  text-align: center;
+}
+
+.headingWrapper {
+  height: 120px; /* Set to a fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.heading h1 {
+  margin: 10px 0;
+  animation: fadeIn 3s ease-in-out;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.heading p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+  margin-top: -10px;
+  margin-bottom: 18px;
+}
+
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  border-right: 4px solid;
+  animation: blink 0.75s step-end infinite;
+  max-width: 100%; /* Prevent overflow */
+  overflow: hidden; /* Hide overflow */
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading h1 {
+    font-size: 2.5rem;
+    overflow: hidden;
+  }
+
+  .heading p {
+    font-size: 1.2rem;
+  }
+
+  .typing{
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+}
+
+/* Animation for the title */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

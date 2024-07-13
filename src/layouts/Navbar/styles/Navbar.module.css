@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  transition: top 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  top: 0;
+}
+
+
+.visible {
+  top: 0;
+}
+
+.navbarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  background-color: rgb(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 26px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.navLinks.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.navLinks li {
+  margin: 5px 40px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
+  transition: 0.2s linear;
+  text-decoration: underline;
+}
+
+.hidden {
+  top: -100px; /* Adjust this value based on your navbar height */
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  left: 0;
+  margin-left: 20px;
+  margin-top: 40px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.menuToggle .bar {
+  height: 3px;
+  width: 25px;
+  background: #333;
+  margin: 3px 0;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background-color: rgb(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .navLinks.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+}

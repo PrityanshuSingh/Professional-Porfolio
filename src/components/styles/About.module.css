@@ -1,0 +1,103 @@
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 20px; /* Space between items */
+  align-items: center; /* Center items vertically */
+  width: 100%;
+}
+
+.imageAndLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25%;
+  gap: 30px;
+}
+
+.cardContainer {
+  background-color: white;
+  width: 100%;
+  color: black;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.aboutHeading {
+  text-align: left;
+  color: rgba(19,19,21);
+  margin-bottom: 20px;
+  font-weight: 300;
+  position: absolute;
+  left:0;
+  top:0;
+  padding-left: 20px;
+  font-size: 3rem;
+}
+
+.aboutText {
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  flex-direction: row; /* Display icons horizontally */
+  gap: 8px; /* Space between links */
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  color: rgb(255, 115, 37);
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px;
+  transition: background 0.3s;
+}
+
+.links a svg {
+  margin-right: 5px;
+}
+
+.links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: black;
+  transition: .2s linear;
+}
+
+@media (max-width: 768px) {
+  .aboutGrid {
+    grid-template-columns: 1fr; 
+    gap: 40px; 
+    margin-right: 20px;
+  }
+
+  .cardContainer {
+    align-items: center;
+  }
+
+  .aboutHeading {
+    text-align: center;
+  }
+
+  .links {
+    justify-content: center;
+  }
+  .aboutText {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align:center;
+  }
+  .aboutGrid {
+    margin-top: 10%;
+  }
+  .aboutHeading {
+    font-size: 2.5rem;
+    margin-left: 20%;
+  }
+}

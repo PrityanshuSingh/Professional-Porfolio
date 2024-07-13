@@ -1,0 +1,85 @@
+.card {
+  background-color: #1c1c1e;
+  color: white;
+  padding: 25px;
+  border-radius: 20px; /* Increased border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  height: auto;
+  padding-bottom: 30px;
+  overflow: hidden; /* Prevent overflow */
+  position: relative; /* Keep this to avoid conflicts */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.cardContent {
+  text-align: left;
+}
+
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 10px; /* Space between items */
+  max-height: 50%; /* Limit the height */
+  overflow-y: auto; /* Enable scroll if necessary */
+}
+
+.contentItem {
+  background-color: rgb(255, 255, 255, 1); /* Background color for individual items */
+  backdrop-filter: blur(10px); /* Add blur effect */
+  color: black;
+  padding: 12px; /* Smaller padding */
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem; /* Smaller font size */
+  height: auto; /* Auto height based on content */
+  white-space: nowrap; /* Prevent line breaks inside items */
+}
+
+.contentItem:hover {
+  background-color: rgb(255, 115, 37); /* Change background color on hover */
+  color:white;
+  transition: .2s linear;
+  cursor: pointer;
+}
+
+.cardTitle {
+  font-size: 1.5rem; /* Adjust title size if needed */
+  font-weight: bold;
+  position: relative;
+  margin-top: 30px;
+  bottom: 5%;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.arrowButtonContainer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .cardTitle {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+
+  .contentItem {
+    background-color: rgb(255, 255, 255, 1); /* Background color for individual items */
+    backdrop-filter: blur(10px); /* Add blur effect */
+    color: black;
+    padding: 7px; /* Smaller padding */
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.7rem; /* Smaller font size */
+  }
+  .arrowButtonContainer {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+}
