@@ -1,0 +1,136 @@
+.ProjectsGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.projectsHeading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 100;
+  color: #bcbcc2;
+  letter-spacing: 6px;
+  word-spacing: 3px;
+  font-size: 1.5rem;
+  text-align: left; 
+  margin-left: 20px;
+  width: 100%; 
+}
+
+.projectsDomain {
+  text-align: center;
+  margin-top: 80px;
+  font-weight: 100;
+  color: #bcbcc2;
+  letter-spacing: 6px;
+  word-spacing: 3px;
+  font-size: 1.5rem;
+}
+
+.domains {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.domain {
+    background-color: transparent;
+    padding: 10px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 45px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.domains h2{
+    font-weight: 500;
+    letter-spacing: 6px;
+    word-spacing: 3px;
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+.domain:hover {
+  transition: 0.2s linear;
+  transform: translateY(-10px);
+}
+
+.card {
+  background-color: rgba(50, 50, 52, 0.5);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.projectTitle {
+  margin-top: 10px;
+  color: white;
+}
+
+.projectDetails {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.cardHeading {
+  text-align: left;
+  margin: 10px 20px;
+  color: #bcbcc2;
+  font-weight: bold;
+}
+
+.descriptionCards, .techStackCards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .projectsHeading,
+  .projectsDomain {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+
+  .domain h2{
+    font-size: 1.3rem;
+    padding: 15px;
+  }
+
+  .descriptionCards, .techStackCards {
+    flex-direction: column; /* Stack vertically on smaller screens */
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectsHeading,
+  .projectsDomain {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .domain {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}

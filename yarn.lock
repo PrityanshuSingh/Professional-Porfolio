@@ -1202,6 +1202,13 @@ find-up@^4.0.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
+framer-motion@^11.3.2:
+  version "11.3.2"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.3.2.tgz#e55ed51af37f0f561ab8e4a2c9e8e7eee6fb5abc"
+  integrity sha512-RgjSzrNFZmedWcvmW4MMc84A7UcoY37jocadE3Mbg3o+UMofodfyeNnYD/HR15UhP22/bb5KOebNhYOj4mYkpQ==
+  dependencies:
+    tslib "^2.4.0"
+
 fs-extra@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
@@ -1491,6 +1498,11 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  integrity sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==
+
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
@@ -1753,7 +1765,7 @@ process@^0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 
-prop-types@^15.8.1:
+prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -1780,10 +1792,20 @@ react-icons@^5.2.1:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.2.1.tgz#28c2040917b2a2eda639b0f797bff1888e018e4a"
   integrity sha512-zdbW5GstTzXaVKvGSyTaBalt7HSfuK5ovrzlpyiWHAFXndXTdd/1hdDHI4xBM1Mn7YriT6aqESucFl9kEXzrdw==
 
+react-intersection-observer@^9.13.0:
+  version "9.13.0"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-9.13.0.tgz#ee10827954cf6ccc204d027f8400a6ddb8df163a"
+  integrity sha512-y0UvBfjDiXqC8h0EWccyaj4dVBWMxgEx0t5RGNzQsvkfvZwugnKwxpu70StY4ivzYuMajavwUDjH4LJyIki9Lw==
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-loading-indicators@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-loading-indicators/-/react-loading-indicators-1.0.0.tgz#f296fbcb397ed5c03a57a9a6abc92c63abfc9c46"
+  integrity sha512-0xI07RxuT62NcdKB+6pphR++cnkk9iu8DO0H9kSKE9X71oY/M+gkqTaCjoYA1T3UYrRKdm52QvnwY/YTAU5/cg==
 
 react-refresh@^0.9.0:
   version "0.9.0"
@@ -1804,6 +1826,14 @@ react-router@6.24.1:
   integrity sha512-PTXFXGK2pyXpHzVo3rR9H7ip4lSPZZc0bHG5CARmj65fTT6qG7sTngmb6lcYu1gf3y/8KxORoy9yn59pGpCnpg==
   dependencies:
     "@remix-run/router" "1.17.1"
+
+react-scroll@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.9.0.tgz#2984006e184afd0e4018f837d127edf5fa8f152c"
+  integrity sha512-mamNcaX9Ng+JeSbBu97nWwRhYvL2oba+xR2GxvyXsbDeGP+gkYIKZ+aDMMj/n20TbV9SCWm/H7nyuNTSiXA6yA==
+  dependencies:
+    lodash.throttle "^4.1.1"
+    prop-types "^15.7.2"
 
 react@^18.3.1:
   version "18.3.1"

@@ -1,14 +1,263 @@
 .carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  width: 80%;
   overflow: hidden;
+  border-radius: 40px;
+  width: 100%;
+  height: 500px; /* Increased height */
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
-.carouselItem {
-  flex: 0 0 auto;
-  transition: transform 0.5s ease-in-out;
+.card {
+  text-align: center;
+}
+
+.projectImage {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.projectTitle {
+  margin-bottom: 5px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 100;
+  color: #bcbcc2;
+  letter-spacing: 6px;
+  word-spacing: 3px;
+  font-size: 1.5rem;
+  text-align: left;
+  width: auto;
+  padding:8px;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+}
+
+.projectType {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: auto;
+  width: 40%;
+  height: 45%;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+
+.projectType h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #bcbcc2;
+  letter-spacing: 6px;
+  word-spacing: 3px;
+  font-size: 1.2rem;
+  text-align: left;
+  width: 100%;
+}
+
+.projectDescription {
+  font-size: 12px;
+  padding: 5px;
+  margin-left: 20px;
+  border-radius: 5px;
+  align-items: left;
+  text-align:left;
+}
+
+.techStacks {
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 20px;
+  align-items: left;
+  text-align:left;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.paginationCircle {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.paginationCircle:hover,
+.paginationCircle.active {
+  background-color: rgb(255, 115, 37);
+}
+
+.arrowButtons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.arrowButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 36px; /* Increased size */
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.arrowButton:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .projectTitle {
+    font-size: 20px;
+    left: 15px;
+  }
+
+  .projectDescription {
+    font-size: 14px;
+  }
+
+  .techStacks {
+    font-size: 12px;
+  }
+
+  .arrowButton {
+    font-size: 28px; /* Smaller size for mobile */
+  }
+
+  .paginationCircle {
+    width: 10px;
+    height: 10px;
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+
+  .projectType {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: auto;
+    font-size: 0.8;
+    width: 30%;
+    height: 40%;
+  }
+
+  .projectType h4 {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    text-align: left;
+    margin-left: 0px;
+  }
+  .projectDescription {
+    font-size: 8px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    align-items: left;
+    text-align:left;
+  }
+  
+  .techStacks {
+    font-size: 8px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    align-items: left;
+    text-align:left;
+  }
+  .projectImage {
+    width: 100%;
+    height: 250px;
+    object-fit:fill;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 500px; /* Adjust height for smaller screens */
+  }
+
+  .projectTitle {
+    font-size: 16px;
+  }
+
+  .projectDescription {
+    font-size: 10px;
+    padding: 5px;
+    margin-left: 20px;
+    border-radius: 5px;
+    align-items: left;
+    text-align:left;
+  }
+  
+  .techStacks {
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 20px;
+    align-items: left;
+    text-align:left;
+  }
+
+  .arrowButton {
+    font-size: 24px; /* Even smaller size for very small screens */
+  }
+  .projectType {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: auto;
+    font-size: 0.8;
+    width: 30%;
+    height: 40%;
+  }
+
+  .projectType h4 {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    text-align: left;
+    margin-left: 0px;
+  }
+  .projectImage {
+    width: 100%;
+    height: 250px;
+    object-fit:fill;
+    border-radius: 15px;
+  }
 }

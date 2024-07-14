@@ -1,5 +1,6 @@
 import { Suspense, lazy } from "react";
-import { Routes, Route,Outlet, Navigate } from "react-router-dom";
+import { Routes, Route, Outlet, Navigate } from "react-router-dom";
+import { Element } from 'react-scroll';
 
 // layouts
 import { Navbar, Footer } from "./layouts";
@@ -16,17 +17,11 @@ const MainLayout = () => (
     <div className="page">
       <Outlet />
     </div>
-    <Footer />
+    <Element name="footer">
+      <Footer />
+    </Element>
   </div>
 );
-
-// const MainLayout = () => (
-//   <div>
-//     <div className="page">
-//       <Outlet />
-//     </div>
-//   </div>
-// );
 
 function App() {
   return (
