@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Container from '../components/Core/Container';
-import Button from '../components/Core/Button';
-import Card from '../components/Core/Card';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import Container from '../Core/Container';
+import Button from '../Core/Button';
+import Card from '../Core/Card';
+import { Link as ScrollLink } from 'react-scroll';
 import styles from './styles/Hero.module.css';
 
 const titles = [
@@ -9,6 +12,12 @@ const titles = [
   'UI/UX Designer',
   'Frontend Developer',
   'Backend Developer',
+  'MERN Stack Developer',
+  'React Developer',
+  'Node.js Developer',
+  'Python Developer',
+  'C/C++ Developer',
+  'Tech Enthusiast',
 ];
 
 const CardData = [
@@ -29,6 +38,7 @@ const Hero = () => {
   const [titleIndex, setTitleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [ref, inView] = useInView({ threshold: 0.2 });
 
   useEffect(() => {
     const title = titles[titleIndex];
@@ -67,30 +77,43 @@ const Hero = () => {
         justifyContent: 'center',
         padding: '100px 24px 24px',
         position: 'relative',
-        width: '95%',
         height: 'auto',
       }}
     >
-      <div className={styles.heading}>
-        <div className={styles.headingWrapper}>
-          <h1 className={styles.typing}>{currentTitle}</h1>
-        </div>
-        <p className={styles.description}>
-          Passionate about creating dynamic and responsive web applications
-          using the latest technologies. I specialize in frontend development,
-          backend technologies, and UI/UX design.
-        </p>
-        <Button text="Contact Me" customStyles={{ width: '250px' }} />
+      <div ref={ref} className={styles.heading}>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={inView ? { opacity: 1, y: 0 } : {}} 
+          transition={{ duration: 0.5 }}
+        >
+          <div className={styles.headingWrapper}>
+            <h1 className={styles.typing}>{currentTitle}</h1>
+          </div>
+          <p className={styles.description}>
+            Passionate about creating dynamic and responsive web applications
+            using the latest technologies. I specialize in frontend development,
+            backend technologies, and UI/UX design.
+          </p>
+          <ScrollLink to="footer" smooth={true} duration={500}>
+            <Button text="Contact Me" customStyles={{ width: '250px' }} />
+          </ScrollLink>
+        </motion.div>
       </div>
 
       <div className={styles.cardGrid}>
         {CardData.map((card, index) => (
-          <Card
+          <motion.div
             key={index}
-            title={card.title}
-            content={card.content}
-            customStyles={card.customStyles}
-          />
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <Card
+              title={card.title}
+              content={card.content}
+              customStyles={card.customStyles}
+            />
+          </motion.div>
         ))}
       </div>
     </Container>

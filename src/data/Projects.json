@@ -1,0 +1,37 @@
+[
+  {
+    "projectName": "FED KIIT",
+    "projectLink": "https://fed-frontend.vercel.app/",
+    "image": "https://uploads-ssl.webflow.com/645fbc01f38b6fb6255c240c/66936175b2d6a465a7e91412_FED%20KIIT.png",
+    "description": "The official website of the Federation of Entrepreneurship Development, KIIT, designed to foster collaboration and innovation among student entrepreneurs.",
+    "techStacks": ["HTML", "SCSS", "JavaScript", "React", "Node.js", "Express", "MongoDB", "Prisma", "Python"]
+  },
+  {
+    "projectName": "Social Media Web App",
+    "projectLink": "https://github.com/PrityanshuSingh/Social-Web-Platform",
+    "image": "https://uploads-ssl.webflow.com/645fbc01f38b6fb6255c240c/66936175887d66e479938785_Social%20Media.webp",
+    "description": "A tailored social media platform for KIIT University, built with the MERN stack, to enhance community engagement and facilitate connections among students.",
+    "techStacks": ["UI/UX", "Figma", "HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"]
+  },
+  {
+    "projectName": "SoundScape Platform",
+    "projectLink": "https://sonsenchantes.netlify.app/",
+    "image": "https://uploads-ssl.webflow.com/645fbc01f38b6fb6255c240c/669361760bcfb8f26bc76a02_Soundscape.png",
+    "description": "An immersive online platform that offers curated soundscapes, combining audio content with an intuitive UI/UX design for a unique user experience.",
+    "techStacks": ["HTML", "CSS", "JavaScript", "React"]
+  },
+  {
+    "projectName": "Weather Dashboard",
+    "projectLink": "https://weather-dashboard-two-psi.vercel.app/",
+    "image": "https://uploads-ssl.webflow.com/645fbc01f38b6fb6255c240c/66937fd3ad4e8025744d342a_pexels-gabriela-palai-129458-395196.jpg",
+    "description": "A dynamic weather dashboard that provides real-time weather updates and forecasts, utilizing the OpenWeatherAPI for accurate data retrieval.",
+    "techStacks": ["HTML", "CSS", "Material-UI", "JavaScript", "React", "OpenWeatherAPI"]
+  },
+  {
+    "projectName": "AgriVision UI/UX Design",
+    "projectLink": "https://www.figma.com/proto/HHOFtWQXsyTxzqYOn6BAgw/AgriVision-App-Design?node-id=274-209&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=274%3A209&show-proto-sidebar=1",
+    "image": "https://uploads-ssl.webflow.com/645fbc01f38b6fb6255c240c/66936175b2d6a465a7e913e8_AgriVision.png",
+    "description": "A multilingual Agrivision app’s UI/UX prototype for real-time AI disease monitoring of crops.",
+    "techStacks": ["UI/UX", "Figma", "Canva", "Wireframing", "Prototyping"]
+  }
+]

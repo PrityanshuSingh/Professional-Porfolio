@@ -31,10 +31,14 @@
   margin-bottom: 20px;
   font-weight: 300;
   position: absolute;
-  left:0;
-  top:0;
+  left:15px;
+  top:25px;
   padding-left: 20px;
-  font-size: 3rem;
+  font-weight: 100;
+  color:#89898d;
+  letter-spacing: 6px;
+  word-spacing: 3px;
+  font-size: 1.5rem;
 }
 
 .aboutText {
@@ -82,6 +86,7 @@
 
   .aboutHeading {
     text-align: center;
+    left: 20%;
   }
 
   .links {
@@ -95,9 +100,5 @@
   }
   .aboutGrid {
     margin-top: 10%;
-  }
-  .aboutHeading {
-    font-size: 2.5rem;
-    margin-left: 20%;
   }
 }

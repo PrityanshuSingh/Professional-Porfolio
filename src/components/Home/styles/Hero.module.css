@@ -46,8 +46,8 @@
   white-space: nowrap;
   border-right: 4px solid;
   animation: blink 0.75s step-end infinite;
-  max-width: 100%; /* Prevent overflow */
-  overflow: hidden; /* Hide overflow */
+  max-width: 100%;
+  overflow: hidden;
 }
 
 @keyframes blink {
@@ -68,13 +68,22 @@
   }
 
   .heading p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    padding: 12px;
   }
 
-  .typing{
-    font-size: 1.5rem;
+  .headingWrapper {
+    height: 100px;
+    margin-top: -10px;
+  }
+
+  .headingWrapper h1{
+    font-size: 1.7rem;
     white-space: nowrap;
   }
+
 }
 
 /* Animation for the title */

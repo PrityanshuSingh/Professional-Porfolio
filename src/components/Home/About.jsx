@@ -1,9 +1,11 @@
 import React from 'react';
-import Container from '../components/Core/Container';
-import Button from '../components/Core/Button';
-import ImageHolder from '../components/Core/ImageHolder';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import Container from '../Core/Container';
+import Button from '../Core/Button';
+import ImageHolder from '../Core/ImageHolder';
 import styles from './styles/About.module.css';
-import Image from '../assets/images/profile/profileImg.png';
+import Image from '../../assets/images/profile/profileImg.png';
 import { FaLinkedin, FaGithub, FaInstagram, FaLink, FaFigma } from 'react-icons/fa';
 
 const About = () => {
@@ -35,6 +37,8 @@ const About = () => {
     }
   ];
 
+  const [ref, inView] = useInView({ threshold: 0.2 });
+
   return (
     <Container
       customStyles={{
@@ -46,21 +50,32 @@ const About = () => {
         marginTop: "50px",
         position: "relative",
         padding: "0px 24px",
-        width: "95%",
       }}
     >
-      <div className={styles.aboutGrid}>
+      <motion.div 
+        ref={ref} 
+        className={styles.aboutGrid} 
+        initial={{ opacity: 0, y: 20 }} 
+        animate={inView ? { opacity: 1, y: 0 } : {}} 
+        transition={{ duration: 0.5 }}
+      >
         <div className={styles.imageAndLinks}>
-          <h1 className={styles.aboutHeading}>About Me</h1>
-          <ImageHolder
-            src={Image}
-            alt="Prityanshu Singh"
-            customStyles={{
-              width: "300px",
-              height: "300px",
-              borderRadius: "50%",
-            }}
-          />
+          <h1 className={styles.aboutHeading}>ABOUT ME</h1>
+          <motion.div 
+            initial={{ scale: 0 }} 
+            animate={inView ? { scale: 1 } : {}} 
+            transition={{ duration: 0.5 }}
+          >
+            <ImageHolder
+              src={Image}
+              alt="Prityanshu Singh"
+              customStyles={{
+                width: "300px",
+                height: "300px",
+                borderRadius: "50%",
+              }}
+            />
+          </motion.div>
           <div className={styles.links}>
             {links.map((link, index) => (
               <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label}>
@@ -71,13 +86,13 @@ const About = () => {
         </div>
         <div className={styles.cardContainer}>
           <p className={styles.aboutText}>
-            Hi, I am Prityanshu Singh, <br /> a passionate web developer with extensive experience in building dynamic web applications using React, Node.js, MongoDB and Express. My journey in web development has equipped me with the skills to create scalable and efficient applications.
+            Hi, I am Prityanshu Singh, <br /> a passionate web developer with extensive experience in building dynamic web applications using React, Node.js, MongoDB, and Express. My journey in web development has equipped me with the skills to create scalable and efficient applications.
           </p>
           <a href="https://drive.google.com/file/d/1GC_qcUPNAFQ8pIrBNwn46oGOb5oVL9rc/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
             <Button text="Resume" customStyles={{ width: '300px' }} />
           </a>
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 };
